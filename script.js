@@ -7,12 +7,19 @@ fetch(url)
 
 let button = document.querySelector("#button");
 let image = document.querySelector(".simpsonsPic");
+let name = document.querySelector(".name");
 let quote = document.querySelector(".quote");
 
-function getImage() {
+function getCharacter() {
   fetch(url)
     .then((res) => res.json())
-    .then((res) => (image.src = res[0].image));
+    .then(
+      (res) => (
+        (image.src = res[0].image),
+        (name.innerText = res[0].character),
+        (quote.innerText = res[0].quote)
+      )
+    );
 }
 
-button.addEventListener("click", getImage);
+button.addEventListener("click", getCharacter);
