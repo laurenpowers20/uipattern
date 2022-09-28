@@ -5,17 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" src="style.css">
-  <title>UI Pattern</title>
+ <link rel="stylesheet" href="style.css">
+  <title>Simpsons UI Pattern</title>
 </head>
 <body>
-<button id="button">Select Me!</button>
-
-<div class="pic-container">
-  <h1 class="name"></h1>
-<img src="" class="simpsonsPic">
+<div class="logo-container">
+<img src="images/simpsons_logo.png" class="logo">
 </div>
-<h2 class="quote"></h2>
+
+
+<!-- Trigger/Open The Modal -->
+<!--<button id="button">Open Modal</button> -->
+<div class="picture-container">
+    <div class="button" class="simpson-pic">
+      <img src="" class="simpsons-pic">
+    </div>
+    <div class="simpson-pic">
+    </div>
+    <div class="simpson-pic">
+    </div>
+    <div class="simpson-pic">
+    </div>
+    <div class="simpson-pic">
+    </div>
+  </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="simpsons-card">
+      <h1 class="name"></h1>
+    <img src="" class="simpsons-pic">
+    <h2 class="quote"></h2>
+    </div>
+  </div>
+</div>
 
 
   
