@@ -1,17 +1,16 @@
 const url = "https://thesimpsonsquoteapi.glitch.me/quotes";
 
-fetch(url)
-  .then((res) => res.json())
-  .then((res) => console.log("success!", res))
-  .catch((err) => console.log("something went wrong...", error));
+// fetch(url)
+//   .then((res) => res.json())
+//   .then((res) => console.log("success!", res))
+//   .catch((err) => console.log("something went wrong...", error));
 
 let name = document.querySelector(".name");
 let quote = document.querySelector(".quote");
+let closeButton = document.querySelector(".close-button");
+let modal = document.querySelector(".modal");
+let trigger = document.querySelector(".layout-photo");
 let image = document.querySelector(".image");
-const modal = document.querySelector("#modal");
-const modalOverlay = document.querySelector("#modal-overlay");
-const closeButton = document.querySelector("#close-button");
-const openButton = document.querySelector("#open-button");
 
 function getCharacter() {
   fetch(url)
@@ -25,14 +24,16 @@ function getCharacter() {
     );
 }
 
+getCharacter();
 
-
-closeButton.addEventListener("click", function () {
-  modal.classList.toggle("closed");
-  modalOverlay.classList.toggle("closed");
-});
-
-openButton.addEventListener("click", function () {
-  modal.classList.toggle("closed");
-  modalOverlay.classList.toggle("closed");
-});
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
