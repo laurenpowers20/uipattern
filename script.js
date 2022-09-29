@@ -9,7 +9,7 @@ let name = document.querySelector(".name");
 let quote = document.querySelector(".quote");
 let closeButton = document.querySelector(".close-button");
 let modal = document.querySelector(".modal");
-let trigger = document.querySelector(".layout-photo");
+let trigger = document.querySelector(".duff");
 let image = document.querySelector(".image");
 
 function getCharacter() {
@@ -37,5 +37,3 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
-
-

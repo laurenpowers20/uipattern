@@ -4,19 +4,38 @@ body {
   font-family: 'Numans', sans-serif;
 }
 
-i {
-  height: 50px;
-  width: 100px;
-  font-size: 75px;
+.main {
+  display: flex;
+  text-align: center;
+
+  align-items: center;
+  justify-content: center;
 }
 
+.donut {
+  height: 70px;
+}
+
+.duff {
+  height: 70px;
+  cursor: pointer;
+}
 .refresh-container{
  text-align: right;
-margin-right: 25%;
+ height: 50px;
+ margin-right: 25%;
 align-items: center;
 font-family: 'Rock Salt', cursive;
 }
 
+.get-info-container{
+  text-align: left;
+ height: 50px;
+ margin-left: 25%;
+align-items: center;
+font-family: 'Rock Salt', cursive;
+
+}
 a {
   color: rgb(3, 11, 33);
 }
@@ -32,16 +51,11 @@ a {
   height: 200px; 
 }
 .gallery {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  
+  width: 400px;
 }
 .photo-container {
  flex-wrap: wrap;
  display: inline-flex;
- cursor: pointer;
 }
 
 .layout-photo {
@@ -70,7 +84,7 @@ a {
   background-color: rgb(236, 237, 243);
   padding: 1rem 1.5rem;
   width: 24rem;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
   border: solid 2px black
 }
 
