@@ -1,10 +1,5 @@
 const url = "https://thesimpsonsquoteapi.glitch.me/quotes";
 
-// fetch(url)
-//   .then((res) => res.json())
-//   .then((res) => console.log("success!", res))
-//   .catch((err) => console.log("something went wrong...", error));
-
 let name = document.querySelector(".name");
 let quote = document.querySelector(".quote");
 let closeButton = document.querySelector(".close-button");
@@ -41,3 +36,13 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+// //Hamburger Menu
+// const hamburgerButton = document.querySelector("#hamburger");
+// const navList = document.querySelector(".menu-items");
+
+// function toggleButton() {
+//   navList.classList.toggle("show");
+// }
+
+// hamburgerButton.addEventListener("click", toggleButton);
