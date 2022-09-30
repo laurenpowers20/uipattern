@@ -7,13 +7,13 @@ body {
 .main {
   display: flex;
   text-align: center;
-
   align-items: center;
   justify-content: center;
 }
 
 .donut {
   height: 70px;
+  cursor: pointer;
 }
 
 .duff {

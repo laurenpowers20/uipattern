@@ -11,6 +11,7 @@ let closeButton = document.querySelector(".close-button");
 let modal = document.querySelector(".modal");
 let trigger = document.querySelector(".duff");
 let image = document.querySelector(".image");
+let newCharacter = document.querySelector(".donut");
 
 function getCharacter() {
   fetch(url)
@@ -26,6 +27,8 @@ function getCharacter() {
 
 getCharacter();
 
+newCharacter.addEventListener("click", getCharacter);
+
 function toggleModal() {
   modal.classList.toggle("show-modal");
 }
@@ -34,6 +37,7 @@ function windowOnClick(event) {
     toggleModal();
   }
 }
+
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
