@@ -36,13 +36,3 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
-
-// //Hamburger Menu
-// const hamburgerButton = document.querySelector("#hamburger");
-// const navList = document.querySelector(".menu-items");
-
-// function toggleButton() {
-//   navList.classList.toggle("show");
-// }
-
-// hamburgerButton.addEventListener("click", toggleButton);
